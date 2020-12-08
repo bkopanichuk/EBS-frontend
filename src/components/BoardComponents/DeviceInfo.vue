@@ -54,10 +54,10 @@ export default {
   methods: {
     toogle: function () {
       if (this.toogle_flag == true) {
-        fetch('https://meter-solutions.herokuapp.com/communicator/turn_off/' + this.deviceInfo.mqtt_id)
+        fetch('https://meter-solutions.herokuapp.com/api/communicator/turn_off/' + this.deviceInfo.mqtt_id)
         this.button_color = "lightblue"
       } else {
-        fetch('https://meter-solutions.herokuapp.com/communicator/turn_on/' + this.deviceInfo.mqtt_id)
+        fetch('https://meter-solutions.herokuapp.com/api/communicator/turn_on/' + this.deviceInfo.mqtt_id)
         this.button_color = "red"
       }
       this.toogle_flag = !this.toogle_flag
